@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_ballShaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngable_magic-8-ball" translatesAutoresizingMaskIntoConstraints="NO" id="7rn-V4-FYD">
+                                <rect key="frame" x="0.0" y="256" width="414" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="0gA-mP-iq6"/>
+                                    <constraint firstAttribute="height" constant="375" id="rJH-AQ-r85"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" alpha="0.94999999999999996" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ask question and shake the phone" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPq-Cj-Df5">
+                                <rect key="frame" x="20" y="106" width="374" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7rn-V4-FYD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="06W-vq-nqu"/>
+                            <constraint firstItem="7rn-V4-FYD" firstAttribute="top" secondItem="VPq-Cj-Df5" secondAttribute="bottom" constant="102" id="JY3-Lz-Dso"/>
+                            <constraint firstItem="VPq-Cj-Df5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="RJa-3R-m6N"/>
+                            <constraint firstItem="VPq-Cj-Df5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ymw-9D-nMQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VPq-Cj-Df5" secondAttribute="trailing" constant="20" id="n9J-Ow-px3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7rn-V4-FYD" secondAttribute="bottom" constant="231" id="nAe-24-iX5"/>
+                            <constraint firstItem="7rn-V4-FYD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qDR-0M-5H0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballLabel" destination="7rn-V4-FYD" id="ebH-e3-vj7"/>
+                        <outlet property="textLabel" destination="VPq-Cj-Df5" id="pQB-uB-UOA"/>
+                        <segue destination="tmr-qi-nkB" kind="presentation" identifier="goToResult" id="Mv5-Gm-L3B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="bAb-kO-tjf">
+            <objects>
+                <viewController id="tmr-qi-nkB" customClass="ResultViewController" customModule="_ballShaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbO-4b-P0S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pngable_magic-8-ball" translatesAutoresizingMaskIntoConstraints="NO" id="hkP-3a-kKV">
+                                <rect key="frame" x="0.0" y="239" width="414" height="364"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="364" id="NPw-bD-81r"/>
+                                    <constraint firstAttribute="height" constant="364" id="YNp-tx-wUk"/>
+                                    <constraint firstAttribute="width" constant="414" id="Yi7-NM-c7K"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="ZQY-nt-llM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6v6-kt-eCU">
+                                <rect key="frame" x="121.5" y="768" width="171" height="30"/>
+                                <state key="normal" title="Press here and ask again"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="tmr-qi-nkB" eventType="touchUpInside" id="ngK-2N-Nzg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amazing. Try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRw-KP-4JQ">
+                                <rect key="frame" x="71" y="115" width="272.5" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gcr-Jw-5pl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gcr-Jw-5pl" firstAttribute="trailing" secondItem="rRw-KP-4JQ" secondAttribute="trailing" constant="70.5" id="BbT-dF-zm6"/>
+                            <constraint firstItem="gcr-Jw-5pl" firstAttribute="trailing" secondItem="6v6-kt-eCU" secondAttribute="trailing" constant="121.5" id="Lye-2M-vSV"/>
+                            <constraint firstItem="rRw-KP-4JQ" firstAttribute="top" secondItem="gcr-Jw-5pl" secondAttribute="top" constant="115" id="Te8-uQ-141"/>
+                            <constraint firstItem="6v6-kt-eCU" firstAttribute="leading" secondItem="gcr-Jw-5pl" secondAttribute="leading" constant="121.5" id="ZbM-o9-0xg"/>
+                            <constraint firstItem="6v6-kt-eCU" firstAttribute="top" secondItem="hkP-3a-kKV" secondAttribute="bottom" constant="165" id="dUd-WM-AzP"/>
+                            <constraint firstItem="hkP-3a-kKV" firstAttribute="centerY" secondItem="jbO-4b-P0S" secondAttribute="centerY" id="ehd-jg-mdL"/>
+                            <constraint firstItem="rRw-KP-4JQ" firstAttribute="leading" secondItem="gcr-Jw-5pl" secondAttribute="leading" constant="71" id="sn7-eo-P0W"/>
+                            <constraint firstItem="gcr-Jw-5pl" firstAttribute="bottom" secondItem="6v6-kt-eCU" secondAttribute="bottom" constant="10" id="uIj-sh-xuO"/>
+                            <constraint firstItem="hkP-3a-kKV" firstAttribute="centerX" secondItem="jbO-4b-P0S" secondAttribute="centerX" id="zvd-RV-dee"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resultBallShaker" destination="hkP-3a-kKV" id="bWe-eD-2sz"/>
+                        <outlet property="resultTextLabel" destination="rRw-KP-4JQ" id="bZm-S7-sxw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUw-iJ-aD4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708.69565217391312" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pngable_magic-8-ball" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
